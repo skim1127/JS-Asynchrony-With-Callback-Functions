@@ -5,13 +5,6 @@ const pc = newPlayableCharacter(100, 110)
 const npc = newNonPlayableCharacter(50, 300)
 
 // have the NPC start walking east immediately
-if (pc.x < npc.x + npc.w &&
-    pc.x + pc.w > npc.x &&
-    pc.y < npc.y + npc.h &&
-    pc.h + pc.y > npc.y) {
-    // collision detected!
-    console.log('collision detected');
-}
 npc.walkNorth(1400, () => {
     npc.walkEast(1200, () => {
         npc.walkSouth(300, () => {
